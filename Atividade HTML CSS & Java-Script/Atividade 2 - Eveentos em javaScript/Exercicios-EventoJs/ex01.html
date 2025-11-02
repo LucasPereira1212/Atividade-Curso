@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 1</title>
+    <style>
+      #changeColor {
+        width: 200px;
+        height: 100px;
+        background-color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="changeColor"></div>
+    <script>
+      const elemento = document.getElementById("changeColor");
+      function handleMouseOver() {
+        elemento.style.backgroundColor = "#ffcc00";
+        console.log("Mouse passou por cima do elemento.");
+      }
+      function handleMouseOut() {
+        elemento.style.backgroundColor = "#ccc";
+        console.log("Mouse saiu de cima do elemento");
+      }
+
+      elemento.addEventListener("mouseover", handleMouseOver);
+      elemento.addEventListener("mouseout", handleMouseOut);
+    </script>
+  </body>
+</html>

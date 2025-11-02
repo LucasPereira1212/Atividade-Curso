@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 3</title>
+  </head>
+  <body>
+    <form id="myForm">
+      <input type="text" class="entrada" />
+      <button type="submit">Clique aqui</button>
+    </form>
+    <script>
+      const formulario = document.getElementById("myForm");
+      const input = formulario.querySelector("input");
+
+      function handleSubmit(event) {
+        event.preventDefault();
+
+        console.log(`Não foi possivel por causa do comportamento pre definido`);
+      }
+
+      input.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          console.log("O enter não envia o formulario");
+        }
+      });
+      formulario.addEventListener("submit", handleSubmit);
+    </script>
+  </body>
+</html>

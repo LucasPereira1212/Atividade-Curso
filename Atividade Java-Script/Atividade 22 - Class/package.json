@@ -1,0 +1,12 @@
+{
+  "name": "atividadeclass",
+  "version": "1.0.0",
+  "description": "Tipo de class",
+  "license": "ISC",
+  "author": "Lucas",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

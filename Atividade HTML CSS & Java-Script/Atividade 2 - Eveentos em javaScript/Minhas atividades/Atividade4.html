@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 4</title>
+    <style>
+      body {
+        height: 2000px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Esse exercico serve para o bloqueio da rolagem</h1>
+    <script>
+      let cont = 0;
+      function preventScroll(event) {
+        if (event.key === "ArrowDown" && cont < 10) {
+          cont++;
+          event.preventDefault();
+        } else if (event.key === "ArrowDown" && cont > 9) {
+          document.removeEventListener("keydown", preventScroll);
+        }
+        console.log(cont);
+      }
+
+      document.addEventListener("keydown", preventScroll);
+    </script>
+  </body>
+</html>

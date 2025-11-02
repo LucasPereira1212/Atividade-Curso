@@ -1,0 +1,33 @@
+<!--Arquivo index.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Style .css" />
+    <title>Document</title>
+    <script src="Atividade-JavaScipt-14.js"></script>
+  </head>
+  <body>
+    <h2>Eventos em elementos HTML</h2>
+
+    <p>Passe o mouse aqui para mudar a cor do texto.</p>
+
+    <button onclick="mostrarAlerta()">Clique aqui</button>
+
+    <input
+      type="text"
+      onfocus=" focar(this, 'Campo em foco')"
+      onblur=" focar(this, '')"
+      placeholder="Digite aqui"
+    />
+
+    <img
+      src="imagem1.png"
+      onmouseover="trocarImagem(this, 'imagem2.png')"
+      onmouseout="trocarImagem(this, 'imagem1.png')"
+      alt="Imagem misteriosa"
+    />
+  </body>
+</html>

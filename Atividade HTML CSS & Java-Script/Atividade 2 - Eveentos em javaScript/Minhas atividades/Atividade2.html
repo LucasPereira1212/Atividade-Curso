@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 2</title>
+  </head>
+  <body>
+    <button id="btn">Clique Aqui</button>
+    <script>
+      const botao = document.getElementById("btn");
+      let cont = 0;
+      function handleClick(event) {
+        cont++;
+        console.log(`Você ja clicou ${cont} vezes`);
+
+        if (cont >= 10) {
+          console.log(`Removendo a contagem do botão`);
+          botao.removeEventListener("click", handleClick);
+        }
+      }
+
+      botao.addEventListener("click", handleClick);
+    </script>
+  </body>
+</html>

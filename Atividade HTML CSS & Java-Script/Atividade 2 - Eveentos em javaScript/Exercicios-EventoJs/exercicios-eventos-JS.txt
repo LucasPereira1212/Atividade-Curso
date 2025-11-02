@@ -1,0 +1,18 @@
+Exercício 4: Prevenir Rolagem para Baixo e Remover Event Listener
+
+Passo 1: Estrutura HTML
+- Crie um novo arquivo HTML e sua estrura básica.
+- Adicione um cabeçalho (<h1>) para indicar a finalidade do exercício.
+
+Passo 2: CSS (Opcional)
+- Acrescente um estilo CSS no <head> para definir a altura do corpo (body) com height: 2000px; para simular uma página longa.
+
+Passo 3: JavaScript para Prevenir a Rolagem
+- No <body> do arquivo, inclua um script que utilize variáveis para contar o número de pressionamentos da tecla "ArrowDown".
+- Crie uma função preventScroll(event) que será chamada sempre que a tecla for pressionada. 
+- Dentro dessa função, incremente a variável count para contar os pressionamentos da tecla.
+- Verifique se a tecla pressionada é "ArrowDown". Se for, use event.preventDefault() para desativar a rolagem para baixo.
+- Se o número de pressionamentos atingir ou exceder 10, remova o event listener com document.removeEventListener().
+
+Passo 4: Adição do Event Listener
+- Use document.addEventListener() para adicionar o event listener à tecla "ArrowDown", conectando-o à função preventScroll() criada anteriormente.

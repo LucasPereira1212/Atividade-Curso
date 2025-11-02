@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 1</title>
+    <style>
+      #changeColor {
+        width: 200px;
+        height: 100px;
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="changeColor" style="background-color: blue"></div>
+
+    <script>
+      const elemento = document.getElementById("changeColor");
+      function handleMouseOver() {
+        elemento.style.backgroundColor = "#FF0000";
+        console.log("Cor alterada com sucesso");
+      }
+
+      function handleMouseOut() {
+        elemento.style.backgroundColor = "#00f";
+        console.log("Cor voltando ao normal");
+      }
+
+      elemento.addEventListener("mouseover", handleMouseOver);
+      elemento.addEventListener("mouseout", handleMouseOut);
+    </script>
+  </body>
+</html>

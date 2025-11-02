@@ -1,0 +1,35 @@
+<!-- Exercício 2 : Remoção de Event Listener após N cliques
+
+Passo 2: Manipulação de Eventos em JavaScript
+- Adicione uma condição dentro da função handleClick() para verificar se o 
+número de cliques atingiu ou excedeu um determinado limite (por exemplo, 3 cliques). 
+- Se a condição for atendida, remova o event listener do botão usando btn.removeEventListener().
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remoção de event listener</title>
+  </head>
+  <body>
+    <button id="btn">Clique Aqui</button>
+    <script>
+      const btn = document.getElementById("btn");
+      let count = 0;
+
+      function handleClick(event) {
+        count++; // +1
+        console.log(count);
+
+        if (count >= 10) {
+          console.log("Removendo o evento após 10 cliques");
+          btn.removeEventListener("click", handleClick);
+        }
+      }
+
+      btn.addEventListener("click", handleClick);
+    </script>
+  </body>
+</html>

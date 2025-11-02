@@ -1,0 +1,128 @@
+* {
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serifs;
+  font-size: 1.8rem;
+  line-height: 1.4;
+}
+
+section {
+  padding: 2.4rem;
+}
+
+figure {
+  margin-bottom: 3.2rem;
+}
+
+p {
+  margin-bottom: 0.6rem;
+}
+
+h1 {
+  font-size: 4.5rem;
+  line-height: 1;
+  margin-bottom: 3.2rem;
+}
+
+h1::first-letter {
+  font-size: 6.4rem;
+}
+
+a:hover {
+  color: #0588c4;
+}
+
+h2 {
+  font-size: 3.2rem;
+  line-height: 1.1;
+  margin-bottom: 2.4rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+  line-height: 1.2;
+  margin-bottom: 1.8rem;
+}
+
+ul {
+  color: #035276;
+  font-style: italic;
+  font-size: 1.6rem;
+  margin-bottom: 2.4rem;
+  margin-left: 2.4rem;
+}
+
+li {
+  margin-bottom: 0.6rem;
+}
+
+hr {
+  display: none;
+}
+
+.Legenda_da_TV {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-left: 3.2rem;
+}
+
+.Link_compra {
+  color: #c44105;
+  font-weight: bolder;
+  font-size: 2.4rem;
+  text-decoration: double;
+  text-decoration-line: underline;
+  margin-bottom: 2.4rem;
+  display: inline-block;
+}
+
+.polegadas {
+  color: #0588c4;
+}
+
+.desconto {
+  color: #0588c4;
+}
+
+.Preço {
+  color: #0588c4;
+}
+
+.Frete {
+  color: #0588c4;
+  text-decoration: solid;
+  text-decoration-line: underline;
+}
+
+.juros {
+  color: #0588c4;
+}
+
+.condicoes {
+  display: inline-block;
+  background-color: #035276;
+  color: #fff;
+  box-shadow: 0 0 1.6rem 0.4rem rgba(0, 0, 0, 0.15);
+  padding: 2.4rem 3.2rem;
+  border-radius: 2rem;
+}
+
+.condicoes .Frete,
+.condicoes .juros {
+  color: #78d4ff;
+}
+
+.logo-wpp {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 8.5rem;
+}
