@@ -14,22 +14,33 @@ body {
   line-height: 1.4;
 }
 
-section {
+main {
+  display: flex;
+  flex-flow: column;
+  gap: 7.63rem;
   padding: 2.4rem;
 }
 
-figure {
-  margin-bottom: 3.2rem;
+section {
+  display: flex;
+  flex-flow: column;
+  gap: 3.12rem;
+  align-items: center;
 }
 
-p {
-  margin-bottom: 0.6rem;
+figure {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+figure img {
+  width: 30rem;
 }
 
 h1 {
   font-size: 4.5rem;
   line-height: 1;
-  margin-bottom: 3.2rem;
 }
 
 h1::first-letter {
@@ -43,13 +54,11 @@ a:hover {
 h2 {
   font-size: 3.2rem;
   line-height: 1.1;
-  margin-bottom: 2.4rem;
 }
 
 h3 {
   font-size: 2.4rem;
   line-height: 1.2;
-  margin-bottom: 1.8rem;
 }
 
 ul {
@@ -64,14 +73,9 @@ li {
   margin-bottom: 0.6rem;
 }
 
-hr {
-  display: none;
-}
-
 .Legenda_da_TV {
   font-style: italic;
   font-size: 1.2rem;
-  margin-left: 3.2rem;
 }
 
 .Link_compra {
@@ -80,7 +84,6 @@ hr {
   font-size: 2.4rem;
   text-decoration: double;
   text-decoration-line: underline;
-  margin-bottom: 2.4rem;
   display: inline-block;
 }
 
@@ -125,4 +128,34 @@ hr {
   bottom: 0;
   right: 0;
   width: 8.5rem;
+}
+
+.container-figure {
+  display: flex;
+  gap: 4.88rem;
+}
+
+.container-precoCondicoes {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 3.12rem;
+}
+
+.container-preco,
+.condicoes {
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+}
+
+.container-listas {
+  display: flex;
+  gap: 3.9rem;
+}
+
+.container-lista {
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
 }
