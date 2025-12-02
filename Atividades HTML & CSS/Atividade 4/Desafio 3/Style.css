@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  color: #303030;
+}
+
+section {
+  padding: 6.1rem;
+  display: flex;
+  flex-flow: column;
+  gap: 1.6rem;
+}
+
+.popup-aberto {
+  & .popup {
+    display: flex;
+  }
+}
+
+.popup {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.925);
+  backdrop-filter: blur(2.5px);
+
+  & .container {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    gap: 2.5rem;
+    width: 50rem;
+    background-color: #fff1d6;
+    padding: 3.12rem;
+    border-radius: 2.5rem;
+    box-shadow: inset 0 0 0.8rem 0.2rem rgba(0, 0, 0, 0.15);
+
+    & .titulo {
+      font-size: 2.76rem;
+      line-height: 1.2;
+      font-weight: 700;
+      text-align: center;
+
+      & .realce {
+        background-color: #d6e4ff;
+        border-radius: 2rem;
+        padding: 0 1.2rem;
+      }
+    }
+
+    & .textos {
+      display: flex;
+      flex-flow: column;
+      gap: 1.6rem;
+    }
+
+    & .botao {
+      &:link,
+      &:visited {
+        align-self: center;
+        text-decoration: none;
+        color: inherit;
+        background-color: #d6e4ff;
+        border-radius: 2.5rem;
+        padding: 0.82rem 3.12rem;
+        font-weight: bold;
+        border: 2px solid #49546b;
+        border-right-width: 4px;
+        border-bottom-width: 4px;
+      }
+
+      &:hover,
+      &:active {
+        border-width: 3px;
+      }
+    }
+
+    & .fechar {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      background-color: #d6e4ff;
+      font-weight: 700;
+      font-size: 1.92rem;
+      border: 2px solid #49546b;
+
+      &:hover {
+        border-width: 1px;
+      }
+    }
+  }
+}

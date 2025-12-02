@@ -1,0 +1,63 @@
+/* Padrão */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  color: #303030;
+}
+
+/* Paginação */
+.container-paginacao {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 5rem;
+}
+
+.btn {
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  font-weight: 700;
+  background-color: rgb(7, 119, 104);
+  color: white;
+  border: solid 1px white;
+  cursor: pointer;
+  font-size: 2.1rem;
+
+  &:hover {
+    background-color: white;
+    color: rgb(7, 119, 104);
+    border: solid 1px rgb(7, 119, 104);
+  }
+}
+
+.item-paginacao:link,
+.item-paginacao:visited {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 50%;
+}
+
+.item-paginacao:hover,
+.item-paginacao:active,
+.item-paginacao.selecionado {
+  background-color: rgb(7, 119, 104);
+  color: white;
+  font-weight: 700;
+}
