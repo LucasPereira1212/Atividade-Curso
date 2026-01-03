@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  color: #303030;
+}
+
+.flex {
+  display: flex;
+
+  &.wrap {
+    flex-flow: row wrap;
+  }
+
+  &.col {
+    flex-flow: column;
+
+    &.wrap {
+      flex-flow: column wrap;
+    }
+  }
+}
+
+section {
+  padding: 6.1rem;
+  justify-content: center;
+}
+
+.carrossel {
+  position: relative;
+  max-width: 100rem;
+
+  & .container {
+    overflow: hidden;
+  }
+
+  & .imagens {
+    gap: 0.82rem;
+    width: max-content;
+
+    & .imagem {
+      position: relative;
+      width: min(
+        calc(calc(100rem - calc(2 * 0.82rem)) / 3),
+        calc(calc(100vw - calc(2 * 0.82rem)) / 3)
+      );
+      aspect-ratio: 1/1;
+      align-items: center;
+      overflow: hidden;
+      justify-content: center;
+      border-radius: 1.5rem;
+
+      &.emfoco::after {
+        background-color: transparent;
+        backdrop-filter: none;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.507);
+        backdrop-filter: blur(2px);
+      }
+
+      & img {
+        height: 100%;
+        width: auto;
+      }
+    }
+  }
+
+  & .botao {
+    position: absolute;
+    background-color: #303030;
+    color: white;
+    border-radius: 0.8rem;
+    width: 3rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    top: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.2);
+
+    &.esquerda {
+      transform: translate(-50%, -50%);
+    }
+
+    &.direita {
+      right: 0;
+      transform: translate(50%, -50%);
+    }
+  }
+}
