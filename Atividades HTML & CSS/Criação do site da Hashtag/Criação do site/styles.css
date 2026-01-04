@@ -119,6 +119,8 @@ input::placeholder {
   border: 0;
   border-bottom: solid 0.4rem #993c38;
   border-right: solid 0.4rem #993c38;
+  transition: ease-in 0.2s;
+  transition-property: border;
 }
 
 .realce-semibold {
@@ -169,21 +171,24 @@ nav ul {
   gap: 2.5rem;
 }
 
-.item-lista-cabecalho a {
-  color: #112e61;
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 600;
-}
+.item-lista-cabecalho {
+  & a {
+    color: #112e61;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color ease-in 0.3s;
 
-.item-lista-cabecalho a:hover,
-.item-lista-cabecalho a:active {
-  color: #f60;
-}
+    &:hover,
+    &:active {
+      color: #f60;
+    }
 
-.item-lista-cabecalho.contem-filhos::after {
-  content: "\2bc6";
+    &.contem-filhos::after {
+      content: "\2bc6";
+    }
+  }
 }
 
 .contem-filhos {
@@ -521,6 +526,7 @@ nav ul {
   color: #005e88;
   font-weight: 700;
   text-decoration: none;
+  transition: color ease-in 0.3s;
 }
 
 .diferenciais-h3-empresas a:hover {
