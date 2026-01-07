@@ -1,0 +1,138 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #404040;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  background-color: #f4f5f7;
+}
+
+h1 {
+  font-size: 3.32rem;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 0.21rem;
+}
+
+h2 {
+  font-size: 2.76rem;
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+h3,
+.blog-titulopost,
+.rodape-titulo {
+  font-size: 2.3rem;
+  line-height: 1.2;
+}
+
+strong {
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  padding: 1.02rem;
+  background-color: white;
+  box-shadow: inset 0 0 0.2rem 0.2rem rgba(0, 0, 0, 0.15);
+  border: 0;
+  border-radius: 0.8rem;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: #404040;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color: #757575;
+}
+
+.flex {
+  display: flex;
+
+  &.wrap {
+    flex-flow: row wrap;
+  }
+
+  &.col {
+    flex-flow: column;
+
+    &.wrap {
+      flex-flow: column wrap;
+    }
+  }
+}
+
+.secao {
+  padding: 7.63rem 2rem;
+}
+
+.container {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.container-diferenciais,
+.container-blog {
+  border-radius: 5rem;
+  box-shadow: inset 0 0 0.8rem 0.3rem rgba(0, 0, 0, 0.15);
+}
+
+.botao {
+  display: inline-block;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 3rem;
+  padding: 0.65rem 2.5rem;
+  color: white;
+  box-shadow: 0 0.21rem 0.8rem rgba(0, 0, 0, 0.15);
+  border: 0;
+  border-bottom: solid 0.4rem #993c38;
+  border-right: solid 0.4rem #993c38;
+  transition: ease-in 0.2s;
+  transition-property: border;
+}
+
+.realce-semibold {
+  font-weight: 600;
+}
+
+.hero-paragrafo,
+.comoajudar-lista,
+.comoajudar-paragrafo,
+.diferenciais-p,
+.rodape-subtitulo {
+  font-size: 1.92rem;
+  line-height: 1.3;
+}
+
+.caixa-gratuito-h3,
+.caixa-blog-h2 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: inline-block;
+  padding: 0.42rem 1.6rem;
+  color: white;
+  border-radius: 1rem;
+  transform: rotate(-3deg) translate(-50%, -50%);
+  box-shadow: 0 0.21rem 0.4rem rgba(0, 0, 0, 0.15);
+}

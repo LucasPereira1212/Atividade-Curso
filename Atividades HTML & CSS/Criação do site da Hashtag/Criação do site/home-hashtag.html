@@ -5,13 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hashtag Treinamentos | Cursos de Excel, VBA, Python e mais!</title>
 
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+
+    <link rel="preload" href="css/global.css" as="style" />
+    <link rel="preload" href="css/styles.css" as="style" />
+
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <link
+      rel="preload"
+      href="Imagens/Formato_Novo/BACKGROUN-banner-01-mobile.webp"
+      as="image/webp"
+    />
+
+    <link
+      rel="stylesheet"
+      href="css-media/media-1160.css"
+      media="(max-width: 1160px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css-media/media-1035.css"
+      media="(max-width: 1035px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css-media/media-830.css"
+      media="(max-width: 830px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css-media/media-767.css"
+      media="(max-width: 767px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css-media/media-480.css"
+      media="(max-width: 480px)"
+    />
   </head>
-  <body>
+  <body class="">
     <!-- Cabeçalho -->
     <header class="cabecalho">
       <img
-        src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/05/Logo-Hashtag-Original-100x45px.png.webp"
+        src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/05/Logo-Hashtag-Original-1.png"
         alt="Logo da Hashtag"
       />
 
@@ -35,7 +80,7 @@
             >
           </li>
 
-          <li class="item-lista-cabecalho contem-filhos">
+          <li class="item-lista-cabecalho contem-filhos aberto">
             <a href="https://www.hashtagtreinamentos.com/#"> Outros Cursos</a>
 
             <ul>
@@ -97,7 +142,7 @@
             <a href="https://www.hashtagtreinamentos.com/blog">Blog</a>
           </li>
 
-          <li class="item-lista-cabecalho contem-filhos">
+          <li class="item-lista-cabecalho contem-filhos aberto">
             <a href="https://www.hashtagtreinamentos.com/#">Contato</a>
             <ul>
               <li>
@@ -119,6 +164,37 @@
           </li>
         </ul>
       </nav>
+      <div class="nav-icones">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          class="nav-icone nav-icone--menu"
+        >
+          <path
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-miterlimit="10"
+            stroke-width="32"
+            d="M80 160h352M80 256h352M80 352h352"
+          ></path>
+        </svg>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          class="nav-icone nav-icone--fechar"
+        >
+          <path
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="32"
+            d="M368 368L144 144M368 144L144 368"
+          ></path>
+        </svg>
+      </div>
     </header>
 
     <main>
@@ -168,15 +244,17 @@
       <section class="secao secao-conteudos">
         <div class="container container-gratuito">
           <img
-            src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/ELEMENTO-mockup-hashtag.png.webp"
+            src="Imagens/Formato_Novo/ELEMENTO-mockup-hashtag.webp"
             alt="Mockup da Hashtag"
             class="img-conteudos"
+            loading="lazy"
           />
           <div id="conteiner-direita">
             <div id="text-container-direta">
               <img
                 src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/ELEMENTO-seta_1.png"
                 alt="Seta para a direita"
+                loading="lazy"
               />
 
               <h2 class="gratuito-h2">
@@ -197,6 +275,7 @@
                     ><img
                       src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/excel-file-svgrepo-com-1.svg"
                       alt="Logo do Excel"
+                      loading="lazy"
                   /></a>
                   <a
                     class="circulo-logo-curso"
@@ -205,6 +284,7 @@
                     ><img
                       src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/vba-svgrepo-com-2-1.svg"
                       alt="Logo do VBA"
+                      loading="lazy"
                   /></a>
                   <a
                     class="circulo-logo-curso"
@@ -213,6 +293,7 @@
                     ><img
                       src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/power-bi-2.svg"
                       alt="Logo do Power BI"
+                      loading="lazy"
                   /></a>
                   <a
                     class="circulo-logo-curso"
@@ -221,6 +302,7 @@
                     ><img
                       src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/microsoft-powerpoint-2013-logo-svgrepo-com-1.svg"
                       alt="Logo do PowerPoint"
+                      loading="lazy"
                   /></a>
                 </div>
 
@@ -232,6 +314,7 @@
                       <img
                         src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/youtube-1.png"
                         alt="Logo do YouTube"
+                        loading="lazy"
                       />YouTube
                     </li></a
                   >
@@ -242,6 +325,7 @@
                       <img
                         src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/instagram-1.png"
                         alt="Logo do Instagram"
+                        loading="lazy"
                       />
                       Instagram
                     </li></a
@@ -253,6 +337,7 @@
                       <img
                         src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/facebook-1.png"
                         alt="Logo do Facebook"
+                        loading="lazy"
                       />Facebook
                     </li></a
                   >
@@ -263,6 +348,7 @@
                       <img
                         src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/tik-tok-1.png"
                         alt="Logo do TikTok"
+                        loading="lazy"
                       />TikTok
                     </li></a
                   >
@@ -273,6 +359,7 @@
                       <img
                         src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/blog-1.png"
                         alt="Ícone de um Blog"
+                        loading="lazy"
                       />Blog
                     </li></a
                   >
@@ -292,6 +379,7 @@
                     ><img
                       src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/python-svgrepo-com-1.svg"
                       alt="Logo do Python"
+                      loading="lazy"
                   /></a>
                   <a
                     class="circulo-logo-curso"
@@ -300,6 +388,7 @@
                     ><img
                       src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/sql-database-sql-azure-svgrepo-com-1.svg"
                       alt="Logo do SQL"
+                      loading="lazy"
                   /></a>
                 </div>
 
@@ -311,6 +400,7 @@
                       <img
                         src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/youtube-1.png"
                         alt="Logo do YouTube"
+                        loading="lazy"
                       />YouTube
                     </li></a
                   >
@@ -321,6 +411,7 @@
                       <img
                         src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/instagram-1.png"
                         alt="Logo do Instagram"
+                        loading="lazy"
                       />
                       Instagram
                     </li></a
@@ -332,6 +423,7 @@
                       <img
                         src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/facebook-1.png"
                         alt="Logo do Facebook"
+                        loading="lazy"
                       />Facebook
                     </li></a
                   >
@@ -342,6 +434,7 @@
                       <img
                         src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/tik-tok-1.png"
                         alt="Logo do TikTok"
+                        loading="lazy"
                       />TikTok
                     </li></a
                   >
@@ -352,6 +445,7 @@
                       <img
                         src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/blog-1.png"
                         alt="Ícone de um Blog"
+                        loading="lazy"
                       />Blog
                     </li></a
                   >
@@ -385,6 +479,7 @@
                     src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/target-svgrepo-com.svg"
                     alt="Ícone Alvo"
                     width="50px"
+                    loading="lazy"
                   />
                 </div>
                 <h3 class="diferenciais-h3">Foco no Mercado</h3>
@@ -409,6 +504,7 @@
                     src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/verified-svgrepo-com.svg"
                     alt="Ícone Check"
                     width="50px"
+                    loading="lazy"
                   />
                 </div>
                 <h3 class="diferenciais-h3">Nível Impressionador</h3>
@@ -436,6 +532,7 @@
                     src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/students-on-class-svgrepo-com.svg"
                     alt="Ícone Sala de Aula"
                     width="50px"
+                    loading="lazy"
                   />
                 </div>
                 <h3 class="diferenciais-h3">+84.600 alunos formados</h3>
@@ -468,50 +565,61 @@
                 <img
                   src="https://uploads-ssl.webflow.com/61b9e0dd381626819c8d4f83/620e9f33ec91a8ea2fd8a2a5_6%20-%20Globo%20Comunica%C3%A7%C3%B5es.png"
                   alt="Logo da Globo"
+                  loading="lazy"
                 />
                 <img
                   src="https://uploads-ssl.webflow.com/61b9e0dd381626819c8d4f83/620e9f35b35a7f00fb515ca3_3%20-%20Petrobras.png"
                   alt="Logo da Petrobrás"
+                  loading="lazy"
                 />
                 <img
                   src="https://uploads-ssl.webflow.com/61b9e0dd381626819c8d4f83/61f2aef3749ea1a140b9ca96_LOreal-logo-5%20(1).webp"
                   alt="Logo da L'Oréal"
                   class="logo-loreal"
+                  loading="lazy"
                 />
                 <img
                   src="https://uploads-ssl.webflow.com/61b9e0dd381626819c8d4f83/620e9f3321ccd59dfc118b57_4%20-%20Ipiranga.png"
                   alt="Logo da Ipiranga"
+                  loading="lazy"
                 />
                 <img
                   src="https://uploads-ssl.webflow.com/644aa7c2eb05a0f70a59d944/64e254e15197e8df5fe77633_animale-logo-2.png"
                   alt="Logo da Animale"
                   class="logo-animale"
+                  loading="lazy"
                 />
                 <img
                   src="https://uploads-ssl.webflow.com/61b9e0dd381626819c8d4f83/620e9f34be3c6e602823539a_5%20-%20Yamaha.webp"
                   alt="Logo da Yamaha"
+                  loading="lazy"
                 />
                 <img
                   src="https://uploads-ssl.webflow.com/61b9e0dd381626819c8d4f83/620e9f34b8f69b5e5fef6f6d_9%20-%20Subsea%207.png"
                   alt="Logo da Subsea7"
                   class="logo-subsea"
+                  loading="lazy"
                 />
                 <img
                   src="https://uploads-ssl.webflow.com/61b9e0dd381626819c8d4f83/620e9f33ec91a80662d8a2a4_7%20-%20Vale.png"
                   alt="Logo da Vale"
+                  loading="lazy"
                 />
                 <img
                   src="https://uploads-ssl.webflow.com/644aa7c2eb05a0f70a59d944/64e253664151507013be752d_rappi-logo.png"
                   alt="Logo da Rappi"
+                  loading="lazy"
                 />
                 <img
                   src="https://uploads-ssl.webflow.com/644aa7c2eb05a0f70a59d944/64e253664151507013be7513_disney-logo.png"
                   alt="Logo da Disney"
                   class="logo-disney"
+                  loading="lazy"
                 />
                 <img
                   src="https://uploads-ssl.webflow.com/644aa7c2eb05a0f70a59d944/64e2536644c35d7635ee95af_capemisa-logo.png"
                   alt="Logo da Capemisa"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -520,12 +628,13 @@
       </section>
 
       <!-- Seção O que falam -->
-      <section class="secao secao-oquefalam">
+      <section class="secao secao-oquefalam flex">
         <div class="container container-oquefalam">
           <div class="oquefalam-titulo">
             <img
               src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/ELEMENTO-megafone.png"
               alt="Ícone de Megafone"
+              loading="lazy"
             />
             <h2>
               O que <span class="realce-semibold">falam</span> sobre a Hashtag
@@ -539,35 +648,41 @@
                 src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/ELEMENTO-seta-esquerda.png"
                 alt="Seta Esquerda do Carrossel"
                 class="oquefalam-seta seta--esquerda"
+                loading="lazy"
               />
               <img
                 src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/ELEMENTO-seta-direita.png"
                 alt="Seta Direita do Carrossel"
                 class="oquefalam-seta seta--direita"
+                loading="lazy"
               />
+              <div class="oquefalam-container-imgs">
+                <div class="oquefalam-carrossel-img oquefalam-carrossel-img--1">
+                  <img
+                    src="https://www.hashtagtreinamentos.com/wp-content/themes/hashtag/assets/img/player-azul.svg"
+                    alt="Seta player"
+                    class="seta-player oquefalam-seta"
+                    loading="lazy"
+                  />
+                </div>
 
-              <div class="oquefalam-carrossel-img oquefalam-carrossel-img--1">
-                <img
-                  src="https://www.hashtagtreinamentos.com/wp-content/themes/hashtag/assets/img/player-azul.svg"
-                  alt="Seta player"
-                  class="seta-player"
-                />
-              </div>
+                <div class="oquefalam-carrossel-img oquefalam-carrossel-img--2">
+                  <img
+                    src="https://www.hashtagtreinamentos.com/wp-content/themes/hashtag/assets/img/player-azul.svg"
+                    alt="Seta player"
+                    class="seta-player oquefalam-seta"
+                    loading="lazy"
+                  />
+                </div>
 
-              <div class="oquefalam-carrossel-img oquefalam-carrossel-img--2">
-                <img
-                  src="https://www.hashtagtreinamentos.com/wp-content/themes/hashtag/assets/img/player-azul.svg"
-                  alt="Seta player"
-                  class="seta-player"
-                />
-              </div>
-
-              <div class="oquefalam-carrossel-img oquefalam-carrossel-img--3">
-                <img
-                  src="https://www.hashtagtreinamentos.com/wp-content/themes/hashtag/assets/img/player-azul.svg"
-                  alt="Seta player"
-                  class="seta-player"
-                />
+                <div class="oquefalam-carrossel-img oquefalam-carrossel-img--3">
+                  <img
+                    src="https://www.hashtagtreinamentos.com/wp-content/themes/hashtag/assets/img/player-azul.svg"
+                    alt="Seta player"
+                    class="seta-player oquefalam-seta"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </div>
 
@@ -594,6 +709,7 @@
               src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/ELEMENTO-seta-1.png"
               alt="Seta para direita"
               class="seta-namidia"
+              loading="lazy"
             />
             <h2 class="h2-namidia">Hashtag Treinamentos na mídia</h2>
           </div>
@@ -603,12 +719,14 @@
               ><img
                 src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/ELEMENTO-globo-news-logo.png"
                 alt="Logo Globo News"
+                loading="lazy"
             /></a>
             <a
               href="https://oglobo.globo.com/economia/crise-mudanca-cultural-levam-20-dos-jovens-empreender-21148006?fbclid=IwAR0M98rJxXbc4jOTz0fvqjCNmeKQ7S6LuKOd5fl1QXueiQVLC4DP2XlrsAY"
               ><img
                 src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/ELEMENTO-oglobo.png"
                 alt="Logo O Globo"
+                loading="lazy"
             /></a>
           </div>
         </div>
@@ -629,6 +747,7 @@
                 <img
                   src="https://www.hashtagtreinamentos.com/wp-content/uploads/2023/06/Excel-8.-Aprenda-a-trabalhar-com-dias-uteis-no-Excel-1024x582.png.webp"
                   alt="Post 1 do Blog da Hashtag"
+                  loading="lazy"
                 />
               </a>
               <p class="blog-postadoem">
@@ -656,6 +775,7 @@
                 <img
                   src="https://www.hashtagtreinamentos.com/wp-content/uploads/2021/06/SUM-e-SUMX-no-Power-BI-1024x576.jpg.webp"
                   alt="Post 2 do Blog da Hashtag"
+                  loading="lazy"
                 />
               </a>
               <p class="blog-postadoem">
@@ -684,6 +804,7 @@
                 <img
                   src="https://www.hashtagtreinamentos.com/wp-content/uploads/2023/06/Excel-6.-5-melhores-dicas-para-Tabela-Dinamica-1024x582.png.webp"
                   alt="Post 3 do Blog da Hashtag"
+                  loading="lazy"
                 />
               </a>
               <p class="blog-postadoem">
@@ -714,6 +835,7 @@
                 <img
                   src="https://www.hashtagtreinamentos.com/wp-content/uploads/2023/06/JavaScript-4.-Aprenda-a-usar-condicionais-em-JavaScript-1024x576.png.webp"
                   alt="Post 4 do Blog da Hashtag"
+                  loading="lazy"
                 />
               </a>
               <p class="blog-postadoem">
@@ -754,6 +876,7 @@
                 <img
                   src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/ELEMENTO-check_1.png"
                   alt="Ícone check"
+                  loading="lazy"
                 />
                 Você quer se tornar uma referência na empresa onde trabalha ou
                 onde vai trabalhar?
@@ -762,6 +885,7 @@
                 <img
                   src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/ELEMENTO-check_1.png"
                   alt="Ícone check"
+                  loading="lazy"
                 />
                 <div>
                   Você quer aprender
@@ -790,6 +914,7 @@
                 <img
                   src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/ELEMENTO-check_1.png"
                   alt="Ícone check"
+                  loading="lazy"
                 />
                 Você quer sair de qualquer nível e chegar ao nível
                 Impressionador, onde praticamente QUALQUER trabalho que você
@@ -799,6 +924,7 @@
                 <img
                   src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/06/ELEMENTO-check_1.png"
                   alt="Ícone check"
+                  loading="lazy"
                 />
                 Você quer se tornar um funcionário destaque na sua empresa?
               </li>
@@ -899,6 +1025,7 @@
           src="https://www.hashtagtreinamentos.com/wp-content/uploads/2022/05/Logo-Hashtag-Original-1.png"
           alt="Logo da Hashtag"
           class="logo-footer"
+          loading="lazy"
         />
 
         <div class="rodape-coluna rodape-coluna-infos">
@@ -1137,7 +1264,8 @@
               >
             </div>
           </div>
-
+        </div>
+        <div class="rodape-container-copyright">
           <hr />
 
           <p class="rodape-copyright">
@@ -1189,6 +1317,7 @@
           <img
             src="https://www.hashtagtreinamentos.com/wp-content/uploads/2021/07/ADI-LJS01-ID-02h_sem-data.png"
             alt="Intensivão de JavaScript"
+            loading="lazy"
           />
         </div>
 

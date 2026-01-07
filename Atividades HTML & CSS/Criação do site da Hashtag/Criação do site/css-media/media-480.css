@@ -1,0 +1,137 @@
+@media all and (max-width: 30em) {
+  /* Conteúdos */
+  .container-gratuito {
+    & .img-conteudos {
+      width: 100%;
+    }
+    & #subContainer-direita {
+      flex-flow: column;
+      align-self: center;
+      & .caixa-cursos-hashtag {
+        & .circulo-logo-curso {
+          width: 6rem;
+          height: 6rem;
+          padding: 1.28rem;
+        }
+
+        & .gratuito-link-lista:link,
+        & .gratuito-link-lista:visited {
+          padding: 0.42rem 4.88rem;
+        }
+      }
+    }
+  }
+
+  /* O que falam */
+
+  .container-oquefalam {
+    margin: 0 5.6rem;
+
+    & .oquefalam-titulo {
+      flex-flow: column;
+      max-width: none;
+    }
+    & .oquefalam-carrossel {
+      & #oquefalam-carrossel-imagens {
+        & .oquefalam-seta {
+          width: 5rem;
+        }
+
+        & .oquefalam-container-imgs {
+          & .oquefalam-carrossel-img {
+            min-width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  /* Na mídia */
+
+  .container-namidia {
+    flex-flow: row wrap;
+    justify-content: center;
+
+    & #text-namidea {
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+
+    & .namidia-links {
+      & a {
+        height: 3.86rem;
+      }
+    }
+  }
+
+  /* blog */
+  .secao-blog {
+    padding-top: 7.63rem;
+
+    & .container-blog {
+      padding: 2.5rem;
+      padding-top: 7.63rem;
+
+      & .caixa-blog-h2 {
+        width: 78.125vw;
+        text-align: center;
+      }
+    }
+  }
+
+  /* Como ajudar */
+  .secao-sec-laramja,
+  .secao-sec-cinza {
+    padding: 4.88rem 2rem;
+
+    & .comoajudar-h2 {
+      text-align: center;
+    }
+  }
+
+  /* Minu Curso */
+
+  .container-minicurso {
+    & h2 {
+      text-align: center;
+    }
+    & .form-minicurso {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      max-width: 50rem;
+      align-self: center;
+      width: 100%;
+    }
+  }
+
+  /* rodape */
+
+  .container-rodape {
+    grid-template-columns: 1fr;
+    max-width: 50rem;
+    gap: 4rem;
+
+    & .logo-footer {
+      grid-row: 1;
+      width: 14rem;
+    }
+
+    & .rodape-coluna {
+      grid-row: 2;
+      align-items: center;
+
+      & .subsecao-rodape,
+      & .subsecao-cursosonline,
+      & .subsecao-assistente,
+      & .rodape-div-iconelink {
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    & .rodape-container-copyright {
+      grid-column: auto;
+      grid-row: 4;
+    }
+  }
+}

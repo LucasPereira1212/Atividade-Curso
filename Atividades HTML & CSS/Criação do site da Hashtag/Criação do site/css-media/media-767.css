@@ -1,0 +1,287 @@
+@media all and (max-width: 47.9375em) {
+  /* Global */
+
+  .secao {
+    padding: 4.88rem 2rem;
+  }
+
+  html {
+    font-size: 43.75%;
+  }
+
+  .nav-aberto {
+    overflow: hidden;
+
+    & .cabecalho {
+      & nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        background-color: rgba(255, 255, 255, 0.95);
+        justify-content: center;
+        align-items: center;
+        padding: 5rem;
+        backdrop-filter: blur(1.5rem);
+
+        & ul {
+          flex-flow: column;
+          align-items: center;
+          overflow: auto;
+          max-height: 100%;
+          padding: 0 5rem;
+        }
+      }
+
+      & .item-lista-cabecalho {
+        &.contem-filhos {
+          &.aberto {
+            display: flex;
+            flex-flow: column;
+            gap: 2.5rem;
+            align-items: center;
+            & ul {
+              display: flex;
+              position: static;
+              box-shadow: none;
+              gap: 1.02rem;
+              align-items: start;
+              list-style: disc;
+              background-color: transparent;
+
+              & li {
+                border-bottom: none;
+                padding: 0;
+              }
+            }
+
+            &::after {
+              content: none;
+            }
+          }
+        }
+      }
+
+      & .nav-icones {
+        z-index: 9999;
+        & .nav-icone {
+          &.nav-icone--fechar {
+            display: block;
+          }
+
+          &.nav-icone--menu {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  /* cabeçalho */
+
+  .cabecalho {
+    & img {
+      width: 10rem;
+    }
+
+    & nav {
+      display: none;
+    }
+
+    & .nav-icones {
+      display: block;
+      & .nav-icone {
+        width: 4rem;
+        color: #112e61;
+
+        &.nav-icone--fechar {
+          display: none;
+        }
+      }
+    }
+  }
+
+  /* Hero */
+
+  .secao-hero {
+    background-image: url("../Imagens/Formato_Novo/BACKGROUN-banner-01-mobile.webp");
+
+    & .container-hero {
+      flex-flow: column;
+      max-width: 82.83rem;
+      & #div-botoes {
+        flex-flow: row wrap;
+        justify-content: center;
+      }
+    }
+
+    & h1,
+    & .hero-paragrafo {
+      text-align: center;
+    }
+  }
+
+  /* conteudos */
+  .secao-conteudos {
+    background-image: url("../Imagens/Formato_Novo/bg-conteudos-mobile.webp");
+    background-size: auto;
+    background-position-y: bottom;
+    background-color: white;
+    padding-bottom: 1rem;
+
+    & .container-gratuito {
+      flex-flow: column;
+      gap: 3.32rem;
+
+      & .img-conteudos {
+        left: 0;
+        max-width: 47.8rem;
+      }
+
+      & #conteiner-direita {
+        order: -1;
+        align-items: center;
+      }
+
+      & #text-container-direta {
+        max-width: 42.5rem;
+        align-self: center;
+      }
+    }
+  }
+
+  /* diferenciais */
+
+  .secao-diferenciais {
+    & .container-diferenciais {
+      & .caixa-titulo-diferenciais {
+        flex-flow: column;
+        text-align: center;
+        align-items: center;
+        gap: 2.5rem;
+        padding-bottom: 14.9rem;
+        & .diferenciais-p {
+          text-align: inherit;
+        }
+
+        & .caixa-diferenciais-h2 {
+          border-bottom: solid 0.3rem #ffb20f;
+          border-left: none;
+        }
+      }
+      & .caixa-restante-diferenciais {
+        & #caixas-diferenciais {
+          flex-flow: column;
+          gap: 15rem;
+        }
+
+        & .diferenciais-empresas {
+          & .imagens-diferencial-empresa {
+            text-align: center;
+          }
+
+          & .imagens-diferencial-empresa {
+            padding: 0 3.12rem;
+          }
+        }
+      }
+    }
+  }
+
+  /* o que falam */
+
+  .secao-oquefalam {
+    & .container-oquefalam {
+      & .oquefalam-titulo {
+        max-width: 40rem;
+        text-align: center;
+      }
+
+      & #oquefalam-carrossel-imagens {
+        gap: 1.82vw;
+        position: relative;
+
+        & .oquefalam-seta {
+          width: 5.6vw;
+
+          &.seta--direita {
+            transform: translate(125%, -40%);
+          }
+
+          &.seta--esquerda {
+            transform: translate(-115%, -40%);
+          }
+        }
+
+        & .oquefalam-container-imgs {
+          width: 100%;
+          display: flex;
+          align-self: stretch;
+          gap: 1.82vw;
+          overflow: hidden;
+          & .oquefalam-carrossel-img {
+            min-width: calc(calc(100% - 1.82vw) / 2);
+          }
+        }
+      }
+    }
+  }
+
+  /* Na mídia */
+
+  .secao-namidia {
+    & .container-namidia {
+      & #text-namidea {
+        min-width: 35.71rem;
+      }
+
+      & #imagens-namidia {
+        flex-flow: row wrap;
+        justify-content: end;
+        gap: 1rem;
+
+        & a {
+          height: 2.86rem;
+
+          & img {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  /* Blog*/
+
+  .secao-blog {
+    & .container-blog {
+      grid-template-rows: auto;
+      grid-template-columns: 1fr;
+      padding: 3.12rem;
+      padding-top: 6.1rem;
+      max-width: 78.57rem;
+    }
+  }
+
+  /* Como ajudar */
+  .secao-comoajudar {
+    padding: 0;
+  }
+
+  /* rodape */
+  .container-rodape {
+    grid-template-columns: repeat(2, auto);
+    justify-items: center;
+    & .rodape-coluna {
+      grid-column: 1;
+      grid-row: 1 / span 3;
+      width: auto;
+    }
+
+    & .rodape-container-copyright {
+      grid-row: 3;
+    }
+  }
+}
