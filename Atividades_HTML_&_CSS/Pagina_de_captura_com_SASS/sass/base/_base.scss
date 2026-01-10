@@ -1,0 +1,29 @@
+@use "../abstracts/helpers" as abs;
+
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include abs.respond(big) {
+    font-size: 56.25%;
+  }
+
+  @include abs.respond(medium) {
+    font-size: 50%;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  width: 100%;
+}

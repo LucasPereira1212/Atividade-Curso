@@ -1,0 +1,66 @@
+@use "../abstracts/helpers" as abs;
+
+.caixa {
+  z-index: 1;
+  position: relative;
+  @include abs.flex($direction: column, $align: center, $gap: 2rem);
+  background-color: abs.$cor-cinza-claro;
+  margin-bottom: 6.1rem;
+  border-radius: 2.5rem;
+  padding: 3.12rem 2.5rem;
+  max-width: 50%;
+  box-shadow: inset 0 0 1.2rem 0.3rem rgba(black, 0.25);
+
+  @include abs.respond(small) {
+    margin-bottom: 0;
+    max-width: 53rem;
+  }
+
+  &__div-logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(25%, -25%);
+    background-color: abs.$cor-cinza-claro;
+    @include abs.flex($align: center);
+    width: 6.5rem;
+    height: 6.5rem;
+    padding: 1.1rem;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0.8rem rgba(black, 0.2);
+  }
+
+  &__titulos {
+    @include abs.flex($direction: column, $align: center, $gap: 0.85rem);
+  }
+
+  &__h1 {
+    @extend %titulo;
+    color: abs.$cor-azul-escuro;
+    text-align: center;
+  }
+
+  &__subtitulo {
+    @extend %subtitulo;
+
+    &--cinza {
+      color: abs.$cor-cinza-escuro;
+    }
+  }
+
+  &__lista {
+    list-style: none;
+    font-size: 1.92rem;
+    line-height: 1.2;
+    @include abs.flex($direction: column, $gap: 0.82rem);
+  }
+
+  &__item-lista {
+    @include abs.flex($align: start, $gap: 0.82rem);
+  }
+
+  &__icone {
+    width: 1.8rem;
+    margin-top: 0.21rem;
+  }
+}

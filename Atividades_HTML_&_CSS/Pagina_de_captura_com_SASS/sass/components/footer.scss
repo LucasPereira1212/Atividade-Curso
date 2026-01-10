@@ -1,0 +1,51 @@
+@use "../abstracts/helpers" as abs;
+
+.rodape {
+  padding: 4.88rem 2rem;
+
+  @include abs.respond(tiny) {
+    padding: 2.5rem 2rem;
+  }
+  &__logo {
+    width: 3.7rem;
+    height: 3.7rem;
+
+    @include abs.respond(tiny) {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+
+  &__textos {
+    @include abs.flex($gap: 0.8rem);
+
+    @include abs.respond(tiny) {
+      flex-flow: column;
+      align-items: center;
+      gap: 0.52rem;
+
+      & p {
+        display: none;
+      }
+    }
+  }
+}
+
+.container--rodape {
+  justify-content: end;
+  align-items: center;
+  gap: 0.8rem;
+
+  @include abs.respond(small) {
+    justify-content: center;
+  }
+
+  @include abs.respond(tiny) {
+    flex-flow: column;
+  }
+
+  & a {
+    text-decoration: none;
+    color: inherit;
+  }
+}

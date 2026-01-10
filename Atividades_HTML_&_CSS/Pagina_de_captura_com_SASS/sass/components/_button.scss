@@ -1,0 +1,15 @@
+@use "../abstracts/helpers" as abs;
+
+.botao {
+  @extend %botao;
+
+  &--amarelo {
+    @extend %botao--amarelo;
+  }
+  &--centralizado {
+    @extend %botao--centralizado;
+  }
+  &--texto-pequeno {
+    @extend %botao--texto-pequeno;
+  }
+}

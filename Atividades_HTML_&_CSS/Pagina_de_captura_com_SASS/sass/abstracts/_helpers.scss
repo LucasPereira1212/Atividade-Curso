@@ -1,0 +1,102 @@
+//Variaveis
+
+$cor-preta: #1a1b1f;
+$cor-cinza-claro: #f1f1f1;
+$cor-cinza: #e1e1e1;
+$cor-cinza-escuro: #4b4b4b;
+$cor-azul-claro: #256783;
+$cor-azul-escuro: #1c415c;
+$cor-amarelo: #eebe2a;
+
+//Mixes
+@mixin flex(
+  $direction: row,
+  $wrap: nowrap,
+  $align: stretch,
+  $justify: start,
+  $gap: 0
+) {
+  display: flex;
+  flex-flow: $direction $wrap;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+@mixin respond($tamanho) {
+  @if $tamanho == big {
+    @media (max-width: 60.625em) {
+      @content;
+    }
+  } @else if $tamanho == medium {
+    @media (max-width: 54.125em) {
+      @content;
+    }
+  } @else if $tamanho == small {
+    @media (max-width: 48.125em) {
+      @content;
+    }
+  } @else if $tamanho == tiny {
+    @media (max-width: 30em) {
+      @content;
+    }
+  }
+}
+
+//exteds
+
+%titulo {
+  font-size: 4.78rem;
+  line-height: 1;
+
+  @include respond(small) {
+    font-size: 3.98rem;
+  }
+
+  @include respond(tiny) {
+    font-size: 3.32rem;
+  }
+}
+
+%subtitulo {
+  font-size: 2.76rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+%subtitulo--pequeno {
+  @include respond(tiny) {
+    font-size: 2.3rem;
+  }
+}
+
+%botao {
+  border-radius: 5rem;
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+  border: solid 0.2rem #000;
+  border-width: 0.2rem;
+  border-right-width: 0.4rem;
+  border-bottom-width: 0.4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.92rem;
+
+  &:hover {
+    border-width: 0.3rem;
+  }
+}
+
+%botao--amarelo {
+  color: #fff;
+  background-color: $cor-amarelo;
+  border-color: darken($cor-amarelo, 30%);
+}
+
+%botao--centralizado {
+  align-self: center;
+}
+%botao--texto-pequeno {
+  @include respond(tiny) {
+    font-size: 1.6rem;
+  }
+}

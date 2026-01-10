@@ -1,0 +1,24 @@
+@use "../abstracts/helpers" as abs;
+
+.passo {
+  @include abs.flex($direction: column, $gap: 0.6rem);
+  &__cabecalho {
+    @include abs.flex($align: center, $gap: 0.8rem);
+  }
+
+  &__caixa-icone {
+    width: 4.3rem;
+    height: 4.3rem;
+    padding: 0.82rem;
+    border-radius: 0.8rem;
+    background-color: abs.$cor-azul-claro;
+  }
+
+  &__titulo {
+    @extend %subtitulo;
+
+    &--azul {
+      color: abs.$cor-azul-claro;
+    }
+  }
+}

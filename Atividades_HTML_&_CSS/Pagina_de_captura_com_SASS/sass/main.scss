@@ -1,0 +1,20 @@
+@charset "UTF-8";
+//1. abstracts
+@use "./abstracts/helpers" as abs;
+
+// 2. Base stuff
+@use "base/base";
+@use "base/typography";
+
+// 3. Layout-related sections
+@use "layout/layout";
+
+// 4. Components
+@use "components/button";
+@use "./components/caixa.scss";
+@use "./components/passo";
+@use "./components/footer.scss";
+@use "./components/popup.scss";
+
+// 5. Pages
+@use "pages/home";

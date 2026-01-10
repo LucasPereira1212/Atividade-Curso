@@ -1,0 +1,45 @@
+@use "../abstracts/helpers" as abs;
+
+/**
+ * Basic typography style for copy text
+ */
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.4;
+  font-size: 1.6rem;
+  color: abs.$cor-preta;
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+.titulo {
+  @extend %titulo;
+  font-weight: 500;
+
+  & span {
+    color: abs.$cor-azul-claro;
+    font-weight: 600;
+  }
+
+  &--pequeno {
+    @include abs.respond(tiny) {
+      font-size: 2.76rem;
+    }
+  }
+}
+.subtitulo {
+  @extend %subtitulo;
+
+  & span {
+    color: abs.$cor-amarelo;
+    font-weight: 600;
+  }
+
+  &--pequeno {
+    @extend %subtitulo--pequeno;
+  }
+}

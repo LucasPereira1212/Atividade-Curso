@@ -1,0 +1,22 @@
+@use "../abstracts/helpers" as abs;
+
+.secao {
+  display: flex;
+  flex-flow: column;
+  padding: 6.1rem 2rem;
+  overflow: hidden;
+
+  @include abs.respond(tiny) {
+    padding: 3.9rem 2rem;
+  }
+}
+
+.container {
+  display: flex;
+  max-width: 100rem;
+  margin: auto;
+}
+
+.grid {
+  display: grid;
+}

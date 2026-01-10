@@ -1,0 +1,206 @@
+@use "../abstracts/helpers" as abs;
+
+.secao {
+  &--hero {
+    background-image: url(https://assets-global.website-files.com/61b9e0dd381626819c8d4f83/64957938a8a62d8071397ed5_pgc-python-bg1.webp);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 0;
+  }
+
+  &--disclaimer {
+    padding: 3.12rem 2rem;
+    background-color: abs.$cor-cinza;
+    box-shadow: 0 0.5rem 1.5rem -0.2rem rgba(black, 0.5);
+  }
+
+  &--quem {
+    background-image: url(https://assets-global.website-files.com/61b9e0dd381626819c8d4f83/62cefb1ecf7f4662905b5b1e_%5BBACKGROUND%5D%20-%20BANNER%2005%20-%20desktop.webp);
+    background-position-x: 50%;
+    background-position-y: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 0;
+    padding-top: 21rem;
+    margin-top: -9rem;
+
+    @include abs.respond(small) {
+      padding-top: 32rem;
+      margin-top: -24rem;
+    }
+
+    @include abs.respond(tiny) {
+      padding-top: 34rem;
+      margin-top: -26rem;
+    }
+  }
+}
+
+.container {
+  &--hero {
+    width: 100%;
+    position: relative;
+    align-items: end;
+
+    @include abs.respond(small) {
+      flex-flow: column;
+      align-items: center;
+    }
+  }
+
+  &--passo,
+  &--aprender {
+    @include abs.flex($direction: column, $gap: 6rem, $align: start);
+
+    @include abs.respond(small) {
+      gap: 3.9rem;
+    }
+  }
+
+  &--quem {
+    position: relative;
+    width: 100%;
+
+    @include abs.respond(small) {
+      flex-flow: column;
+      align-items: center;
+      gap: 3.12rem;
+    }
+  }
+}
+
+.grid {
+  &--passo {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 6rem;
+    column-gap: 3rem;
+
+    @include abs.respond(small) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 3.12rem;
+      column-gap: 2rem;
+    }
+
+    @include abs.respond(tiny) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  &--aprender {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+
+    @include abs.respond(small) {
+      gap: 2rem;
+    }
+
+    @include abs.respond(tiny) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 3.12rem;
+      align-self: center;
+    }
+  }
+}
+
+.div-lira {
+  position: absolute;
+  display: flex;
+  width: 70%;
+  right: 0;
+  bottom: 0;
+  transform: translateX(10%);
+
+  @include abs.respond(small) {
+    position: relative;
+    transform: none;
+    gap: 3.12rem;
+    width: 100%;
+  }
+}
+
+.disclaimer__paragrafo {
+  font-size: 1.33rem;
+}
+
+.img-lira {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+
+  @include abs.respond(small) {
+    justify-self: center;
+    max-width: 27.5rem;
+    grid-row: auto;
+    grid-column: 1 / span 2;
+  }
+
+  @include abs.respond(tiny) {
+    grid-column: auto;
+  }
+}
+
+.cabecalho-titulo {
+  @include abs.flex($align: center, $gap: 1.6rem);
+}
+
+.aprender-img {
+  border-radius: 2rem;
+  transition: transform ease 0.2s;
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  @include abs.respond(tiny) {
+    max-width: 48rem;
+  }
+}
+
+.quem {
+  @include abs.flex($direction: column, $gap: 3.12rem);
+  color: #fff;
+  max-width: 50%;
+  width: 100%;
+  margin-bottom: 6.1rem;
+
+  @include abs.respond(small) {
+    max-width: 53rem;
+    margin-bottom: 0;
+  }
+
+  &__cabecalho {
+    border-left: solid 0.4rem abs.$cor-amarelo;
+    padding-left: 2rem;
+  }
+
+  &__textos {
+    @include abs.flex($direction: column, $gap: 1.6rem);
+
+    & span {
+      color: abs.$cor-amarelo;
+      font-weight: 600;
+    }
+  }
+}
+
+.img-lira-logo {
+  position: absolute;
+  width: 45%;
+  right: 0;
+  bottom: 0;
+
+  @include abs.respond(small) {
+    position: relative;
+    max-width: 40rem;
+    width: 100%;
+  }
+}
+.img-seta {
+  width: 4.1rem;
+  @include abs.respond(small) {
+    width: 3.5rem;
+  }
+
+  @include abs.respond(tiny) {
+    width: 3rem;
+  }
+}
