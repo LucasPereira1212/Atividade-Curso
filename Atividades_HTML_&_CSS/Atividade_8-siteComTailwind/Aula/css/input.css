@@ -1,0 +1,70 @@
+@import "tailwindcss";
+@theme {
+  --font-avenir: "Avenir", "sans-serif";
+  --font-avenir_heavy: "Avenir Heavy", "sans-serif";
+
+  @keyframes subir-rg {
+    0% {
+      transform: translate(0, 0%);
+    }
+
+    100% {
+      transform: translateY(-80%);
+    }
+  }
+}
+@keyframes subir-dinheiro {
+  0% {
+    transform: translate(0, 0%);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes subir-texto {
+  0% {
+    transform: translate(0, -100%);
+  }
+
+  100% {
+    transform: translateY(-350%);
+  }
+}
+
+@keyframes descer-carteira {
+  0% {
+    transform: translate(0, -25.33%);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+*,
+*::after,
+*::before {
+  letter-spacing: -0.06em;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url(../fonts/AvenirLTStd-Book.otf);
+}
+
+@font-face {
+  font-family: "Avenir Heavy";
+  src: url(../fonts/AvenirLTStd-Heavy.otf);
+}
+
+.animate-timeline-view-\[80\%_0\%\] {
+  animation-timeline: view(80% 0%);
+}
+.animate-timeline-view-\[65\%_0\%\] {
+  animation-timeline: view(65% 0%);
+}
+.animate-timeline-view-\[60\%_0\%\] {
+  animation-timeline: view(60% 0%);
+}

@@ -1,0 +1,17 @@
+{
+  "name": "atividade_8-sitecomtailwind",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "watch:tailwind": "npx @tailwindcss/cli -i ./Aula/css/input.css -o ./Aula/css/output.css --watch"
+  },
+  "devDependencies": {
+    "prettier": "^3.7.4",
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "tailwindcss": "^4.1.18"
+  }
+}
