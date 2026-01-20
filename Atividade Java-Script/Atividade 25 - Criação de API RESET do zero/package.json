@@ -1,0 +1,17 @@
+{
+  "name": "api-do-zero",
+  "version": "1.0.0",
+  "description": "Criação de API do zero com Express.js",
+  "license": "ISC",
+  "author": "Lucas",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "dev": "node --watch .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "joi": "^18.0.2"
+  }
+}
