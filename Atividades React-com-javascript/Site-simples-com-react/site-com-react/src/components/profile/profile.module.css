@@ -1,0 +1,91 @@
+.container {
+  background-color: hsla(0, 0%, 100%, 0.9);
+  border-radius: 1rem;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  margin: 10px;
+  max-height: 641px;
+}
+
+.avatar {
+  border-radius: 100%;
+  box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.5);
+  margin: 1rem auto;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.name {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.info {
+  border-top: solid 1px #b39ddb;
+  padding: 0.75rem 0;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.links {
+  display: flex;
+  flex-flow: column;
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 0.2rem;
+  border-top: solid 1px #b39ddb;
+  padding-top: 1.5rem;
+}
+
+.linkButton {
+  background: linear-gradient(45deg, #8e44ad, #f78ca0);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.625rem 4.2rem;
+  padding-left: 4rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  width: 75%;
+  text-align: center;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.linkButton:hover,
+.linkButtonMale:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.icons {
+  width: 25px;
+  height: 24px;
+}
+
+.linkButtonMale {
+  background: linear-gradient(45deg, #2980b9, #27ae60);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.625rem 4.2rem;
+  padding-left: 4rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  width: 75%;
+  text-align: center;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
