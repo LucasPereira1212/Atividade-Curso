@@ -1,0 +1,76 @@
+Exercício: Criando uma Calculadora de IMC em HTML - Passo a Passo
+
+Neste exercício, você irá criar uma página HTML para uma Calculadora de Índice de Massa Corporal (IMC). Siga o passo a passo abaixo para criar a estrutura HTML:
+
+- Crie um arquivo HTML chamado index.html.
+- Adicione a estrutura básica do HTML com <!DOCTYPE html>.
+- Dentro do <head> vincule o arquivo CSS.
+- No <body>, crie um <div> com id="imc-form".
+- Dentro do <div id="imc-form">, adicione um <h1> com o texto "Calculadora de IMC".
+- Crie um <form> com id="calc-form".
+- Dentro do <form>, adicione:
+        -Um campo de texto para o nome.
+        -Um campo numérico para a altura.
+        -Um campo numérico para o peso.
+        -Um campo oculto para a categoria de IMC.
+        -Um botão de envio.
+- Crie uma <div> com id="resultado" para exibir o resultado do cálculo.
+- No final do <body>, adicione a tag <script src="script.js"></script> para vincular o arquivo JavaScript.
+Salve o arquivo index.html.
+
+Esse é um guia básico para criar a estrutura HTML da calculadora de IMC. Você pode detalhar mais os elementos conforme necessário durante a implementação.
+
+Dica: Pesquise sobre propriedades required e step.
+
+--------------------------------------------------------------------------------------------------------------------------
+Passo a Passo Conceitual para Desenvolver o Código JavaScript da Calculadora de IMC:
+
+- Evento de Carregamento do Documento:
+
+Utilize document.addEventListener("DOMContentLoaded", function () { ... }); para garantir que o código JavaScript seja executado somente após o carregamento completo do documento HTML.
+Aquisição de Elementos do DOM:
+
+Obtenha referências aos elementos do formulário e outros elementos relevantes utilizando document.getElementById().
+Evento de Envio do Formulário:
+
+Adicione um evento de escuta para o evento de envio do formulário utilizando formulario.addEventListener("submit", function (event) { ... });.
+
+- Prevenção do Comportamento Padrão:
+
+Utilize event.preventDefault() para evitar que o formulário seja enviado quando o botão de envio for clicado.
+Validação do Nome:
+
+Verifique se o campo de nome não está vazio.
+Se estiver vazio, exiba uma mensagem de erro. Caso contrário, esconda a mensagem de erro.
+
+- Cálculo do IMC:
+
+Obtenha os valores de altura e peso do formulário e calcule o IMC utilizando a fórmula: IMC = peso / (altura * altura).
+
+- Determinação da Categoria de IMC:
+
+Com base no valor do IMC calculado, determine em qual categoria o usuário se enquadra (Abaixo do peso, Peso normal, Sobrepeso ou Obesidade).
+Atribua uma cor de fundo ao elemento de resultado com base na categoria.
+
+- Exibição do Resultado:
+
+Atualize o elemento de resultado com uma mensagem que inclua o nome do usuário, o valor do IMC e a categoria correspondente.
+Atualização do Campo de Categoria:
+
+Atualize o valor do campo oculto de categoria com a categoria de IMC determinada.
+
+- Manipulação dos Dados do Formulário:
+
+Utilize FormData para coletar todos os dados do formulário.
+Exiba os dados coletados ou realize operações adicionais conforme necessário.
+
+- Teste e Depuração:
+
+Teste o código em diferentes cenários, incluindo casos com dados válidos e inválidos.
+Utilize ferramentas de depuração do navegador para identificar e corrigir possíveis erros ou problemas.
+
+- Otimização e Refatoração:
+
+Refatore o código para torná-lo mais legível, modular e eficiente, conforme necessário.
+Considere a possibilidade de adicionar comentários ou documentação para facilitar a compreensão do código por outros desenvolvedores.
+Parabéns! Você concluiu o desenvolvimento do código JavaScript para a calculadora de IMC. Teste completamente a aplicação e garanta que ela esteja funcionando conforme o esperado.
