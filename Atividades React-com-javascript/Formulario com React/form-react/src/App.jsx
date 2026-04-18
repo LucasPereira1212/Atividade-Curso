@@ -1,6 +1,34 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import "./App.css";
 import { Controller, useForm } from "react-hook-form";
+
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+
+const schema = yup.object({
+  nomeCurso: yup
+    .string()
+    .required("O nome do curso é obrigatório")
+    .min(3, "O nome do curso deve conter pelo menos 3 caracteres")
+    .max(50, "O nome do curso deve conter no máximo 50 caracteres"),
+  data: yup
+    .date("Formato de data inválido")
+    .required("A data de início é obrigatória")
+    .typeError("Insira uma data válida"),
+  categoria: yup
+    .string()
+    .required("escolha uma categoria")
+    .oneOf(
+      ["programacao", "design", "marketing", "outros"],
+      "Categoria inválida",
+    ),
+  descricao: yup
+    .string()
+    .required("A descrição do curso é obrigatória")
+    .min(10, "A descrição deve conter pelo menos 10 caracteres")
+    .max(200, "A descrição deve conter no máximo 200 caracteres"),
+});
 
 function App() {
   const {
@@ -8,8 +36,9 @@ function App() {
     handleSubmit,
     reset,
     register,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm({
+    resolver: yupResolver(schema),
     defaultValues: {
       nomeCurso: "",
       data: "",
@@ -18,7 +47,9 @@ function App() {
     },
   });
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
+    // Simulando um envio para o servidor
+    await new Promise((resolve) => setTimeout(resolve, 2000));
     console.log(data);
 
     reset();
@@ -28,22 +59,11 @@ function App() {
       <h1>Cadastro de Curso</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         {/* Campo entrada de nome do curso */}
-        {/* <Controller
-          control={control}
-          name='nomeCurso'
-          render={({ field }) => (
-            <input type='text' placeholder='Nome do curso' {...field} />
-          )}
-        /> */}
-
         <input
           type='text'
           placeholder='Nome do curso'
-          {...register("nomeCurso", {
-            required: "O nome do curso é obrigatório",
-          })}
+          {...register("nomeCurso")}
         />
-
         {errors.nomeCurso && (
           <span className='error'>{errors.nomeCurso.message}</span>
         )}
@@ -51,7 +71,6 @@ function App() {
         {/* Campo de data de inicio */}
         <Controller
           control={control}
-          rules={{ required: "true" }}
           name='data'
           render={({ field }) => (
             <input
@@ -62,6 +81,8 @@ function App() {
             />
           )}
         />
+
+        {errors.data && <span className='error'>{errors.data.message}</span>}
 
         {/* Seleção de categoria */}
         <Controller
@@ -80,6 +101,10 @@ function App() {
           )}
         />
 
+        {errors.categoria && (
+          <span className='error'>{errors.categoria.message}</span>
+        )}
+
         {/* Campo de descrição */}
         <Controller
           control={control}
@@ -89,8 +114,13 @@ function App() {
           )}
         />
 
+        {errors.descricao && (
+          <span className='error'>{errors.descricao.message}</span>
+        )}
         {/* Botão  */}
-        <button type='submit'>Cadastrar</button>
+        <button type='submit' disabled={isSubmitting}>
+          {isSubmitting ? "Enviando..." : "Cadastrar"}
+        </button>
       </form>
     </div>
   );
