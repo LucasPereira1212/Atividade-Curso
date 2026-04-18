@@ -3,7 +3,13 @@ import "./App.css";
 import { Controller, useForm } from "react-hook-form";
 
 function App() {
-  const { control, handleSubmit, reset } = useForm({
+  const {
+    control,
+    handleSubmit,
+    reset,
+    register,
+    formState: { errors },
+  } = useForm({
     defaultValues: {
       nomeCurso: "",
       data: "",
@@ -22,19 +28,30 @@ function App() {
       <h1>Cadastro de Curso</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         {/* Campo entrada de nome do curso */}
-        <Controller
+        {/* <Controller
           control={control}
           name='nomeCurso'
           render={({ field }) => (
             <input type='text' placeholder='Nome do curso' {...field} />
           )}
+        /> */}
+
+        <input
+          type='text'
+          placeholder='Nome do curso'
+          {...register("nomeCurso", {
+            required: "O nome do curso é obrigatório",
+          })}
         />
 
-        <span className='error'> O nome do curso é obrigatório</span>
+        {errors.nomeCurso && (
+          <span className='error'>{errors.nomeCurso.message}</span>
+        )}
 
         {/* Campo de data de inicio */}
         <Controller
           control={control}
+          rules={{ required: "true" }}
           name='data'
           render={({ field }) => (
             <input
@@ -52,7 +69,7 @@ function App() {
           name='categoria'
           render={({ field }) => (
             <select {...field}>
-              <option value='' disabled selected>
+              <option value='' disabled>
                 Escolha a categoria...
               </option>
               <option value='programacao'>Programação </option>
@@ -62,6 +79,7 @@ function App() {
             </select>
           )}
         />
+
         {/* Campo de descrição */}
         <Controller
           control={control}
